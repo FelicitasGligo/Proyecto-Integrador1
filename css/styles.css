@@ -5,103 +5,158 @@
 }
 
 body{
-    background-image: url(../images/fondo\ rosa\ bebe.jpg)
+  background-image: url(../images/fondo\ rosa\ bebe.jpg);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #333333;
 }
 
-h1{
-  font-family: 'ballet', cursive;
-  font-weight: bolder;
-  font-size: 100px;
+/*header*/
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  background-image: url(../images/fondoheader.jpg);
+  background-size: 100%;
 }
 
-/*index*/
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+header img {
+  height: 175px;
+  width: 100%;
+  border-radius: 25px;
 }
 
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #fdf8f8;
-    color: #333333;
-    line-height: 1.5;
+header form {
+  display: flex;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+}
+
+header input[type="text"] {
+  width: 700px;
+  height: 60px;
+  padding: 10px 18px;
+  border: 2px solid #f4a6c0;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #8a3b5c;
+  font-size: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+header input[type="text"]::placeholder {
+  color: #d9a0b5;
+}
+
+header button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 25px;
+  background-color: #e75480;
+  color: #ffffff;
+  margin-left: 10px;
+  width: 115px;
+  height: 60px;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+}
+
+/* Nav superior */
+.nav-superior {
+  margin-top: 15px;
+}
+
+.nav-superior ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-superior a {
+  display: block;
+  padding: 3px 14px;
+  background-color: #e75480;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  margin: 3px;
+  text-align: center;
+}
+
+/*index.html*/
+.title-main{
+  font-family: "Playfair Display", cursive;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #d86a88;
+  margin-bottom: 30px;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
+    color:#b8526f;
 }
-
 
 main {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
+    width: 100%;
+    padding: 30px 50px;
 
-
-.title-main {
-    text-align: center;
-    color: #d86a88;
-    font-size: 100px;
-    margin-bottom: 30px;
 }
 
 .section-title {
-    font-size: 22px;
-    color: #4a4a4a;
+    font-size: 30px;
+    color:#333333;
     border-bottom: 2px solid #f3c6d3;
     padding-bottom: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .products-section {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
-
 
 .products-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
 }
 
 .product-card {
-    background-color: #ffffff;
-    border: 1px solid #f0e0e5;
-    border-radius: 8px;
-    padding: 15px;
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
+  width: 18%;
+  background-color: #ffffff;
+  border: 2px solid #f0e0e5;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 .product-img {
     width: 100%;
     height: 180px;
-    border-radius: 6px;
-    margin-bottom: 12px;
 }
 
 .product-title {
     font-size: 18px;
-    color: #333333;
+    color: #d86a88;
     margin-bottom: 8px;
 }
 
-.product-title a:hover {
-    color: #d86a88;
-}
-
 .product-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: #666666;
     margin-bottom: 12px;
 }
@@ -113,37 +168,24 @@ main {
     margin-bottom: 12px;
 }
 
-/* Botón de detalle */
 .product-btn {
-    display: inline-block;
     background-color: #d86a88;
     color: #ffffff;
     padding: 8px 16px;
     border-radius: 4px;
+    border: 2px solid #b8526f;
     font-size: 14px;
     font-weight: bold;
 }
 
-.product-btn:hover {
-    background-color: #b8526f;
-}
-
-
+/*footer*/
 footer {
     background-color: #f3c6d3;
     text-align: center;
     padding: 20px;
-    font-size: 14px;
+    font-size: 20px;
     color: #555555;
     margin-top: 20px;
-}
-@media (min-width: 600px) {
-    .product-card {
-        width: calc(50% - 10px);
-    }
-}
-@media (min-width: 1024px) {
-    .product-card {width: calc(25% - 15px);}
 }
 
 
