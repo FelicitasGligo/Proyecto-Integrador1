@@ -10,17 +10,17 @@
     <header>
             <a href="./index.html"> <img src="./images/logomagnia2.png" alt=""></a>
             <form action="search-results.html" method="get">
-                <label> <input type="text" name="buscar" placeholder="buscar" required ></label>
+                <label> <input type="text" name="buscar" placeholder="Buscar" required ></label>
                 <button type="submit">Buscar</button>
             </form>
         <nav class="nav-superior">
             <ul>
                 <li><a href="index.html"> Home </a></li>
-                <li><a href="search-results.html"> Resultados de busqueda </a></li>
+                <li><a href="search-results.html"> Resultados de búsqueda </a></li>
                 <li><a href="product.html"> Producto </a></li>
                 <li><a href="register.html"> Registrarse </a></li>
-                <li><a href="category.html"> Categorias </a></li>
-                <li><a href="login.html"> Iniciar sesion </a></li>
+                <li><a href="category.html"> Categorías </a></li>
+                <li><a href="login.html"> Iniciar sesión </a></li>
             </ul>
         </nav>
         <nav class="nav-categorias">
@@ -52,8 +52,8 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div>
+    <main class="main-register">
+        <div class="register-container">
         <h1>Registrate acá</h1>
         <form action="./index.html" method="get">
             <div>
@@ -69,10 +69,10 @@
                 <input id="repetir-contrasena" type="password" name="repetir-contrasena">
             </div>
             <div>
-                <button type="submit">Registrarme</button>
+                <label for="terminos-condiciones"><input type="checkbox" name="terminos-condiciones">Acepto los términos y condiciones</label>
             </div>
             <div>
-                <label for="terminos-condiciones"><input type="checkbox" name="terminos-condiciones">Acepto los términos y condiciones</label>
+                <button type="submit">Registrarme</button>
             </div>
             <a href="./login.html">Ya tengo una cuenta</a>
         </form>
