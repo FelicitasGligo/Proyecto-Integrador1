@@ -176,15 +176,6 @@ main {
     font-weight: bold;
 }
 
-footer {
-    background-color: #f3c6d3;
-    text-align: center;
-    padding: 20px;
-    font-size: 20px;
-    color: #555555;
-    margin-top: 20px;
-}
-
 /*login*/
 .login-container {
   width: 100%;
@@ -330,4 +321,14 @@ footer {
   color: #b8526f;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 25px;
+}
+
+/*footer*/
+footer {
+    background-color: #f3c6d3;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    color: #555555;
+    margin-top: 20px;
 }
