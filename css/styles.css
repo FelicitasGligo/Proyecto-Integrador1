@@ -332,3 +332,42 @@ footer {
     color: #555555;
     margin-top: 20px;
 }
+.productodeproduct{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.productoimagen{
+    order: 2;
+    width: 50%;
+}
+.productoinfo{
+    order: 1;
+    width: 45%;
+}
+.productonombre{
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.productop{
+    margin-bottom: 10px;
+}
+.productoprecio{
+    font-size: 20px;
+    color: #8a3b5c;
+}
+.productoul{
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 15px;
+}
+.productoli{
+    border: 1px solid #cccccc;
+    padding: 5px 12px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #b8526f;
+}
