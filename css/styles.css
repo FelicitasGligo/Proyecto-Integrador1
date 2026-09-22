@@ -355,7 +355,7 @@ footer {
 }
 .productoprecio{
     font-size: 20px;
-    color: #8a3b5c;
+    color: #6d1934;
 }
 .productoul{
     text-decoration: none;
@@ -365,9 +365,37 @@ footer {
     margin-top: 15px;
 }
 .productoli{
-    border: 1px solid #cccccc;
+    border: 1px;
     padding: 5px 12px;
     margin-right: 10px;
     margin-bottom: 10px;
     background-color: #b8526f;
+}
+.reviewsproducto{
+    margin-top: 50px;
+}
+.reviewstitulo{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.reviewproducto1{
+    background-color: #ffffff;
+    border: 1px ;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+}
+.reviewrating{
+    color: #6d1934;
+    margin-bottom: 5px;
+}
+.reviewcomentario{
+    margin-bottom: 5px;
+}
+.reviewfecha{
+    font-size: 13px;
+    color: #6d1934;
+}
+.reviewusuario{
+    font-size: 13px;
+    color: #6d1934;
 }
