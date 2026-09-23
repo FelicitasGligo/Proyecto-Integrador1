@@ -426,3 +426,25 @@ footer {
     font-size: 13px;
     color: #6d1934;
 }
+@media (max-width: 768px) {
+    
+    .productoimagen {
+        width: 100%;
+    }
+    .productoinfo{
+        width: 100%;
+    }
+    .productoimagen {
+        order: 1;
+        margin-bottom: 20px;
+    }
+ 
+    .productoinfo {
+        order: 2;
+    }
+    .product-card{
+        width: 100%;
+        margin-right: 0;
+    }
+    
+}
