@@ -359,6 +359,9 @@ footer {
     color: #555555;
     margin-top: 20px;
 }
+
+/*product*/
+
 .productodeproduct{
     display: flex;
     flex-wrap: wrap;
@@ -425,4 +428,10 @@ footer {
 .reviewusuario{
     font-size: 13px;
     color: #6d1934;
+}
+
+/*media quaries*/
+
+@media (max-width: 440px) {
+
 }
