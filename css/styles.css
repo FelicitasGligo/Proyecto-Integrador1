@@ -359,6 +359,9 @@ footer {
     color: #555555;
     margin-top: 20px;
 }
+
+/*product*/
+
 .productodeproduct{
     display: flex;
     flex-wrap: wrap;
@@ -426,8 +429,13 @@ footer {
     font-size: 13px;
     color: #6d1934;
 }
-@media (max-width: 768px) {
-    
+<<<<<<< HEAD
+=======
+
+/*media quaries*/
+
+@media (max-width: 440px) {
+   
     .productoimagen {
         width: 100%;
     }
@@ -447,4 +455,6 @@ footer {
         margin-right: 0;
     }
     
+
 }
+>>>>>>> c10165dfac7f7b5e90f8ab422255026edae15ef6
