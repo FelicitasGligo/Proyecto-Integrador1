@@ -8,21 +8,6 @@
 </head>
 <body>
     <header>
-            <a href="./index.html"> <img src="./images/logomagnia2.png" alt=""></a>
-            <form action="search-results.html" method="get">
-                <label> <input type="text" name="Buscar" placeholder="Buscá un producto" required ></label>
-                <button type="submit">Buscar</button>
-            </form>
-        <nav class="nav-superior">
-            <ul>
-                <li><a href="index.html"> Home </a></li>
-                <li><a href="search-results.html"> Resultados de búsqueda </a></li>
-                <li><a href="product.html"> Producto </a></li>
-                <li><a href="register.html"> Registrarse </a></li>
-                <li><a href="category.html"> Categorías </a></li>
-                <li><a href="login.html"> Iniciar sesión </a></li>
-            </ul>
-        </nav>
         <nav class="nav-categorias">
             <ul>
                 <li><a href="category.html">Beauty</a></li>
@@ -51,6 +36,23 @@
                 <li><a href="category.html">Womens watches</a></li>
             </ul>
         </nav>
+        <div class="header-principal">
+            <a href="./index.html"> <img src="./images/logomagnia2.png" alt=""></a>
+            <form action="search-results.html" method="get">
+                <label class="buscador"> <input type="text" name="Buscar" placeholder="Buscá un producto" required ></label>
+                <button type="submit">Buscar</button>
+            </form>
+            <nav class="nav-superior">
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="search-results.html"> Resultados de búsqueda </a></li>
+                    <li><a href="product.html"> Producto </a></li>
+                    <li><a href="register.html"> Registrarse </a></li>
+                    <li><a href="category.html"> Categorías </a></li>
+                    <li><a href="login.html"> Iniciar sesión </a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main class="main-register">
         <div class="register-container">
@@ -69,7 +71,7 @@
                 <input id="repetir-contrasena" type="password" name="repetir-contrasena">
             </div>
             <div>
-                <label for="terminos-condiciones"><input type="checkbox" name="terminos-condiciones">Acepto los términos y condiciones</label>
+                <label class="terminos" for="terminos-condiciones"><input class="checkbox" type="checkbox" name="terminos-condiciones">Acepto los términos y condiciones</label>
             </div>
             <div>
                 <button type="submit">Registrarme</button>

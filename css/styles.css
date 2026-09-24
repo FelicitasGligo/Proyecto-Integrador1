@@ -12,9 +12,7 @@ body{
 
 header {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   padding: 20px 40px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 15px;
@@ -22,27 +20,39 @@ header {
   background-size: 100%;
 }
 
+.header-principal {
+  width: 80%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 header img {
-  height: 175px;
-  width: 100%;
+  height: 250px;
+  width: 400px;
   border-radius: 25px;
 }
 
 header form {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-top: 20px;
   font-family: "Playfair Display", serif;
+  width: 100%;
 }
 
 header input[type="text"] {
-  width: 700px;
-  height: 60px;
+  width: 1085px;
+  height: 70px;
   padding: 10px 18px;
   border: 2px solid #f4a6c0;
   border-radius: 30px;
   background-color: #ffffff;
   color: #8a3b5c;
-  font-size: 20px;
+  font-size: 22px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -58,22 +68,24 @@ header button {
   color: #ffffff;
   margin-left: 10px;
   width: 115px;
-  height: 60px;
+  height: 70px;
   font-size: 20px;
   text-align: center;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 
 .nav-superior {
-  margin-top: 15px;
+  width: 100%;
+  margin-top: 25px;
 }
 
 .nav-superior ul {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -81,25 +93,29 @@ header button {
 
 .nav-superior a {
   display: block;
-  padding: 3px 14px;
+  padding: 14px 30px;
   background-color: #e75480;
   color: #ffffff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 22px;
   border-radius: 10px;
-  margin: 3px;
-  text-align: center;
-}/* Nav categorías */
+  margin: 6px 0;
+  text-align: center;;
+}
+
+/* Nav categorías */
 .nav-categorias {
-  width: 100%;
-  margin-top: 15px;
-  padding-top: 15px;
+  width: 12%;
+  background-color: #fde2ec;
+  border: 2px solid #f4a6c0;
+  border-radius: 20px;
+  padding: 12px 10px;
+  margin-right: 30px;
 }
 
 .nav-categorias ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -107,15 +123,11 @@ header button {
 
 .nav-categorias a {
   display: block;
-  padding: 6px 14px;
-  background-color: #fde2ec;
+  padding: 3px 12px;
   color: #b03060;
   text-decoration: none;
-  font-size: 20px;
-  border-radius: 20px;
-  margin: 5px;
+  font-size: 15px;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 20px;
 }
   
 .title-main{
@@ -365,26 +377,31 @@ footer {
 .productodeproduct{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .productoimagen{
     order: 2;
-    width: 50%;
+    width: 30%;
+}
+.productoimagen img{
+  width: 100%;
+  border-radius: 15px;
 }
 .productoinfo{
     order: 1;
-    width: 45%;
+    width: 60%;
 }
 .productonombre{
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 40px;
+    margin-bottom: 12px;
 }
 .productop{
+  font-size: 20px;
     margin-bottom: 10px;
 }
 .productoprecio{
-    font-size: 20px;
+    font-size: 26px;
     color: #6d1934;
 }
 .productoul{
@@ -395,14 +412,16 @@ footer {
     margin-top: 15px;
 }
 .productoli{
+    font-size: 18px;
     border: 1px;
-    padding: 5px 12px;
+    padding: 6px 16px;
     margin-right: 10px;
     margin-bottom: 10px;
     background-color: #b8526f;
+    color: #ffffff;
 }
 .reviewsproducto{
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .reviewstitulo{
     font-size: 24px;
@@ -429,30 +448,282 @@ footer {
     font-size: 13px;
     color: #6d1934;
 }
-/*media quaries*/
+
+/*media q.*/
 
 @media (max-width: 440px) {
-   
-    .productoimagen {
-        width: 100%;
-    }
-    .productoinfo{
-        width: 100%;
-    }
-    .productoimagen {
-        order: 1;
-        margin-bottom: 20px;
-    }
- 
-    .productoinfo {
-        order: 2;
-    }
-    .product-card{
-        width: 100%;
-        margin-right: 0;
-    }
-    footer{
-        height: 100px;
-    }
+  
+  main {
+    padding: 20px 15px;
+  }
+
+  .title-main {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .section-title {
+    font-size: 15px;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+  }
+  
+  .product-card{
+      width: 48%;
+      margin-right: 0;
+      padding: 10px;
+  }
+
+  .product-desc {
+    font-size: 12px;
+  }
+
+  .product-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .product-price {
+    font-size: 15px;
+  }
+
+  .productoimagen {
+    margin-bottom: 15px;
+  }
+
+  .productoimagen img {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .productonombre {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .productop {
+    font-size: 15px;
+    margin-bottom: 8px;
+  }
+
+  .productoprecio {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .productoul {
+    margin-top: 10px;
+  }
+
+  .productoli {
+    font-size: 13px;
+    padding: 4px 10px;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    color: #ffffff;
+    border-radius: 15px;
+  }
+
+  .reviewsproducto {
+    margin-top: 25px;
+  }
+
+  .reviewstitulo {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .reviewproducto1 {
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+  
+  footer{
+      font-size: 18px;
+  }
+
+  header {
+    padding: 10px 8px;
+  }
+
+  header ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-principal {
+    width: 68%;
+    padding: 0;
+  }
+
+  header .nav-categorias {
+    width: 32%;
+    margin-right: 8px;
+    padding: 8px 4px;
+    border-radius: 12px;
+  }
+
+  header .nav-categorias a {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
+
+  header img {
+    display: block;
+    width: 75%;
+    height: auto;
+    margin: auto;
+  }
+
+  header form {
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+  }
+
+  header form .buscador {
+    display: block;
+    width: 72%;
+  }
+
+  header form .buscador input {
+    width: 100%;
+    height: 32px;
+    font-size: 12px;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  header form button {
+    width: 25%;
+    height: 32px;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+  }
+
+  /*Navegador*/
+  header .nav-superior {
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  header .nav-superior ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  header .nav-superior li {
+    width: 48%;
+    margin: 3px 1%;
+  }
+
+  header .nav-superior a {
+    display: block;
+    font-size: 12px;
+    padding: 8px 0;
+    margin: 0;
+  }
+
+  /*login*/
+  .main-login{
+    padding: 20px 0;
+
+  }
+
+  .login-container{
+    width: 85%;
+    padding: 16px;
+    margin: 0 auto;
+  }
+
+   .login-container h1 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding-bottom: 8px;
+  }
+
+  .login-container label {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .login-container input {
+    width: 90%;
+    height: 30px;
+    font-size: 13px;
+    padding: 0 12px;
+    margin: 4px 0 0 0;
+  }
+
+  .login-container button {
+    width: 30%;
+    height: 32px;
+    font-size: 14px;
+    padding: 0;
+    margin: 4px 0 8px 0;
+  }
+
+  .login-container a {
+    font-size: 13px;
+
+  }
+
+  /*Register*/
+    .main-register{
+    padding: 20px 0;
+  }
+
+  .register-container{
+    width: 85%;
+    padding: 16px;
+    margin: 0 auto;
+  }
+
+  .register-container h1 {
+    font-size: 24px;
+    margin: 0 0 20px 0;
+    padding-bottom: 8px;
+  }
+
+  .register-container label {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .register-container input {
+    width: 90%;
+    height: 30px;
+    font-size: 13px;
+    padding: 0 12px;
+    margin: 4px 0 0 0;
+  }
+
+  .register-container .terminos {
+    margin: 10px 0;
+  }
+
+  .register-container .checkbox {
+    width: auto;
+    height: auto;
+    margin: 4px 6px 0 0;
+  }
+
+  .register-container button {
+    width: 30%;
+    height: 32px;
+    font-size: 14px;
+    padding: 0;
+    margin: 4px 0 8px 0;
+  }
+
+  .register-container a {
+    font-size: 13px;
+  }
 
 }
