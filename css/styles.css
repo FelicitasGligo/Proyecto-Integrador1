@@ -84,9 +84,8 @@ header button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
-  margin: 0;
   padding: 0;
 }
 
@@ -98,7 +97,7 @@ header button {
   text-decoration: none;
   font-size: 22px;
   border-radius: 10px;
-  margin: 6px 0;
+  margin: 6px 6px;
   text-align: center;;
 }
 
