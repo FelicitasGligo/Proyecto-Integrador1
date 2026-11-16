@@ -303,6 +303,7 @@ main {
 .main-register {
   display: flex;
   justify-content: start;
+  align-items: center;
   padding-top: 40px;
   padding-bottom: 20px;
 }
@@ -377,6 +378,13 @@ main {
   color: #b8526f;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 25px;
+}
+
+.register-container .error-register {
+  display: none;
+  margin: 8px 0 0 0;
+  color: #c0392b;
+  font-size: 18px;
 }
 
 /*footer*/
@@ -781,6 +789,10 @@ footer {
 
   .register-container a {
     font-size: 13px;
+  }
+
+  .register-container .error-register {
+    font-size: 12px;
   }
 
 }
