@@ -290,6 +290,14 @@ main {
 .main-login{
   display: flex;
   padding-top: 50px;
+  align-items: center;
+}
+
+.login-container .error-login {
+  display: none;
+  margin: 8px 0 0 0;
+  color: #c0392b;
+  font-size: 18px;
 }
 
 /*Register*/
@@ -362,7 +370,6 @@ main {
   border: 2px solid #b8526f;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 25px;
-  cursor: pointer;
 }
 
 .register-container a {
@@ -719,6 +726,10 @@ footer {
   .login-container a {
     font-size: 13px;
 
+  }
+
+  .login-container .error-login {
+    font-size: 12px;
   }
 
   /*Register*/

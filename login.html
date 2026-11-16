@@ -54,14 +54,16 @@
         </nav>
         <div class="login-container">
             <h1>Login</h1>
-            <form action="./index.html" method="get">
+            <form class="form-login" action="./index.html" method="get">
                 <div>
                     <label for="email">Email</label>
                     <input id="email" type="text" name="email" value="">
+                    <div class="error-login error-email"></div>
                 </div>
                 <div>
                     <label for="contrasena">Contraseña </label>
                     <input type="password" id="contrasena" name="contrasena">
+                    <div class="error-login error-contrasena"></div>
                 </div>
                 <div>
                     <button type="submit">Ingresar</button>
@@ -73,5 +75,6 @@
     <footer>
         <p>Sitio creado por Melina Piancatelli, Megan Morrison Fell y Felicitas Gligo.</p>
     </footer>
+    <script src="./js/login.js"></script>
 </body>
 </html>
