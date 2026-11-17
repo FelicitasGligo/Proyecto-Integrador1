@@ -54,21 +54,25 @@
         </nav>
         <div class="register-container">
         <h1>Registrate acá</h1>
-        <form action="./index.html" method="get">
+        <form class="form-register" action="./index.html" method="get">
             <div>
                 <label for="email">Email</label>
                 <input id="email" type="text" name="email" value="">
+                <div class="error-register error-email"></div>
             </div>
             <div>
                 <label for="contrasena">Contraseña</label>
                 <input id="contrasena" type="password" name="contrasena">
+                <div class="error-register error-contrasena"></div>
             </div>
             <div>
                 <label for="repetir-contrasena">Repetir contraseña</label>
-                <input id="repetir-contrasena" type="password" name="repetir-contrasena">
+                <input type="password" id="repetirContrasena" name="repetirContrasena">
+                <div class="error-register error-repetir"></div>
             </div>
-            <div>
-                <label class="terminos" for="terminos-condiciones"><input class="checkbox" type="checkbox" name="terminos-condiciones">Acepto los términos y condiciones</label>
+            <div class="terminos">
+                <input class="checkbox" type="checkbox" id="terminos" name="terminos" value="acepto">
+                <label for="terminos">Acepto términos y condiciones</label>
             </div>
             <div>
                 <button type="submit">Registrarme</button>
@@ -80,5 +84,6 @@
     <footer>
         <p>Sitio creado por Melina Piancatelli, Megan Morrison Fell y Felicitas Gligo.</p>
     </footer>
+    <script src="./js/register.js"></script>
 </body>
 </html>

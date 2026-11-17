@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 let contenedores = document.querySelectorAll(".products-container");
 
 fetch("https://dummyjson.com/products/category/kitchen-accessories")
@@ -61,3 +62,29 @@ fetch("https://dummyjson.com/products/category/sports-accessories")
     .catch(function (error) {
         console.log("El error es: " + error);
     });
+=======
+let listaCategorias = document.querySelector('.nav-categorias ul') 
+
+fetch('https://dummyjson.com/products/category-list')
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(data) {
+        console.log(data);
+        let contenido = ''
+
+        for (let i = 0; i < data.length; i++) {
+            contenido += `
+                <li>
+                    <a href="category.html?categoria=${data[i]}">
+                        ${data[i]}
+                    </a>
+                </li>`
+        }
+
+        listaCategorias.innerHTML = contenido;
+    })
+    .catch(function(error) {
+        console.log('Error: ' + error)
+    })
+>>>>>>> cba934482aff9e5d7aafec4d98c44fca49ca8a0d

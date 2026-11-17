@@ -75,10 +75,6 @@ header button {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 22px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> dfa02165a7ffa506a64d0b0f4694e68023b70901
 .nav-superior {
   width: 100%;
   margin-top: 25px;
@@ -308,6 +304,7 @@ main {
 .main-register {
   display: flex;
   justify-content: start;
+  align-items: center;
   padding-top: 40px;
   padding-bottom: 20px;
 }
@@ -382,6 +379,13 @@ main {
   color: #b8526f;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 25px;
+}
+
+.register-container .error-register {
+  display: none;
+  margin: 8px 0 0 0;
+  color: #c0392b;
+  font-size: 18px;
 }
 
 /*footer*/
@@ -786,6 +790,10 @@ footer {
 
   .register-container a {
     font-size: 13px;
+  }
+
+  .register-container .error-register {
+    font-size: 12px;
   }
 
 }
