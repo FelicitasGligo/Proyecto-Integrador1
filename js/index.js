@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let contenedores = document.querySelectorAll(".products-container");
 
 fetch("https://dummyjson.com/products/category/kitchen-accessories")
