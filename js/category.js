@@ -26,7 +26,7 @@ fetch('https://dummyjson.com/products/category-list')
 //category  (meli)
 let categoria = new URLSearchParams(location.search).get("categoria")
 
-let tituloCategoria = document.querySelector(".titulo-categoria")
+let tituloCategoria = document.querySelector("main h1")
 tituloCategoria.innerText = categoria
 
 fetch(`https://dummyjson.com/products/category/${categoria}`)
@@ -36,7 +36,7 @@ fetch(`https://dummyjson.com/products/category/${categoria}`)
 .then(function(data) {
     console.log(data);
 
-    let seccion = document.querySelector(".lista-categoria")
+    let seccion = document.querySelector(".productos-categoria")
     let productos = ""
 
     for (let i = 0; i < data.products.length; i++) {
