@@ -28,6 +28,7 @@ formulario.addEventListener("submit", function(e){
         errorInputRepetir.style.display = "block"
         errorInputRepetir.innerHTML = "<p> Las contraseñas no coinciden </p>"
     } else {
+        localStorage.setItem("usuarioEmail", inputEmail.value)
         this.submit()
     }
 })
