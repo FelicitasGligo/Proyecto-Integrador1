@@ -18,7 +18,7 @@ formBuscador.addEventListener("submit", function(e){
         this.submit()
     }
 })
-
+// search results (feli)
 let queryString = location.search
 let params = new URLSearchParams(queryString)
 let terminoBuscado = params.get("Buscar")
