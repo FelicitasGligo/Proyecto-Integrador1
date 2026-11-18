@@ -2,69 +2,64 @@
 let contenedores = document.querySelectorAll(".products-container");
 
 fetch("https://dummyjson.com/products/category/kitchen-accessories")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        let productos = data.products;
-        let contenidoSeccion1 = "";
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    console.log(data);
 
-        for (let i = 0; i < 10; i++) {
-            contenidoSeccion1 += `
-                <article class="product-card">
-                    <a href="./product.html?id=${productos[i].id}">
-                        <img class="product-img" src="${productos[i].thumbnail}" alt="${productos[i].title}">
-                    </a>
-                    <h3 class="product-title">
-                        <a href="./product.html?id=${productos[i].id}">${productos[i].title}</a>
-                    </h3>
-                    <p class="product-desc">${productos[i].description}</p>
-                    <p class="product-price">$${productos[i].price}</p>
-                    <a class="product-btn" href="./product.html?id=${productos[i].id}">Ver detalle</a>
-                </article>
-            `;
-        }
+    let seccion = document.querySelector(".seccion-uno")
+    let productos = ""
 
-        contenedores[0].innerHTML = contenidoSeccion1;
-    })
-    .catch(function (error) {
-        console.log("El error es: " + error);
-    });
+    for (let i = 0; i < data.products.length; i++) {
 
+        productos = productos + `
+        <article class="product-card">
+            <a href="./product.html?id=${data.products[i].id}"><img class="product-img" src="${data.products[i].thumbnail}" alt="${data.products[i].title}"></a>
+            <h3 class="product-title"><a href="./product.html?id=${data.products[i].id}">${data.products[i].title}</a></h3>
+            <p class="product-desc">${data.products[i].description}</p>
+            <p class="product-price">$${data.products[i].price}</p>
+            <a class="product-btn" href="./product.html?id=${data.products[i].id}">Ver detalle</a>
+        </article>`
+    }
+
+    seccion.innerHTML = productos
+})
+.catch(function(error) {
+    console.log("Error: " + error);
+})
 
 
 fetch("https://dummyjson.com/products/category/sports-accessories")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        let productos = data.products;
-        let contenidoSeccion2 = "";
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    console.log(data);
 
-        for (let i = 0; i < 10; i++) {
-            contenidoSeccion2 += `
-                <article class="product-card">
-                    <a href="./product.html?id=${productos[i].id}">
-                        <img class="product-img" src="${productos[i].thumbnail}" alt="${productos[i].title}">
-                    </a>
-                    <h3 class="product-title">
-                        <a href="./product.html?id=${productos[i].id}">${productos[i].title}</a>
-                    </h3>
-                    <p class="product-desc">${productos[i].description}</p>
-                    <p class="product-price">$${productos[i].price}</p>
-                    <a class="product-btn" href="./product.html?id=${productos[i].id}">Ver detalle</a>
-                </article>
-            `;
-        }
+    let seccion = document.querySelector(".seccion-dos")
+    let productos = ""
 
-        contenedores[1].innerHTML = contenidoSeccion2;
-    })
-    .catch(function (error) {
-        console.log("El error es: " + error);
-    });
+    for (let i = 0; i < data.products.length; i++) {
 
+        productos = productos + `
+        <article class="product-card">
+            <a href="./product.html?id=${data.products[i].id}"><img class="product-img" src="${data.products[i].thumbnail}" alt="${data.products[i].title}"></a>
+            <h3 class="product-title"><a href="./product.html?id=${data.products[i].id}">${data.products[i].title}</a></h3>
+            <p class="product-desc">${data.products[i].description}</p>
+            <p class="product-price">$${data.products[i].price}</p>
+            <a class="product-btn" href="./product.html?id=${data.products[i].id}">Ver detalle</a>
+        </article>`
+    }
 
+    seccion.innerHTML = productos
+})
+.catch(function(error) {
+    console.log("Error: " + error);
+})
+    
 //nav-categorias ul    
+
 let listaCategorias = document.querySelector('.nav-categorias ul') 
 
 fetch('https://dummyjson.com/products/category-list')
@@ -110,3 +105,4 @@ formBuscador.addEventListener("submit", function(e){
         this.submit()
     }
 })
+
