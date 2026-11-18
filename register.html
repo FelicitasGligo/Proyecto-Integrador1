@@ -9,16 +9,19 @@
 <body>
     <header>
         <div class="header-principal">
-            <a href="./index.html"> <img src="./images/logomagnia2.png" alt=""></a>
-            <form action="search-results.html" method="get">
-                <label class="buscador"> <input class="barra" type="text" name="Buscar" placeholder="Buscá un producto" required ></label>
+            <a href="./index.html"><img src="./images/logomagnia2.png" alt="Logo Magnia"></a>
+            <form class="form-buscador" action="search-results.html" method="get">
+                <label class="buscador">
+                    <input class="barra" type="text" name="Buscar" placeholder="Buscá un producto">
+                </label>
                 <button type="submit">Buscar</button>
             </form>
+            <div class="error-buscador"></div>
             <nav class="nav-superior">
                 <ul>
-                    <li><a href="index.html"> Home </a></li>
-                    <li><a href="register.html"> Registrarse </a></li>
-                    <li><a href="login.html"> Iniciar sesión </a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="item-registro"><a href="register.html">Registrarse</a></li>
+                    <li class="item-login"><a href="login.html">Iniciar sesión</a></li>
                 </ul>
             </nav>
         </div>
