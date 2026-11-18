@@ -12,17 +12,18 @@
     <header>
         <div class="header-principal">
             <a href="./index.html"><img src="./images/logomagnia2.png" alt="Logo Magnia"></a>
-            <form action="search-results.html" method="get">
+            <form class="form-buscador" action="search-results.html" method="get">
                 <label class="buscador">
-                    <input class="barra" type="text" name="Buscar" placeholder="Buscá un producto" required>
+                    <input class="barra" type="text" name="Buscar" placeholder="Buscá un producto">
                 </label>
                 <button type="submit">Buscar</button>
             </form>
+            <div class="error-buscador"></div>
             <nav class="nav-superior">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="register.html">Registrarse</a></li>
-                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li class="item-registro"><a href="register.html">Registrarse</a></li>
+                    <li class="item-login"><a href="login.html">Iniciar sesión</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,32 +31,7 @@
 
     <main>
         <nav class="nav-categorias">
-            <ul>
-                <li><a href="category.html">Beauty</a></li>
-                <li><a href="category.html">Fragrances</a></li>
-                <li><a href="category.html">Furniture</a></li>
-                <li><a href="category.html">Groceries</a></li>
-                <li><a href="category.html">Home decoration</a></li>
-                <li><a href="category.html">Kitchen accessories</a></li>
-                <li><a href="category.html">Laptops</a></li>
-                <li><a href="category.html">Mens shirts</a></li>
-                <li><a href="category.html">Mens shoes</a></li>
-                <li><a href="category.html">Mens watches</a></li>
-                <li><a href="category.html">Mobile accessories</a></li>
-                <li><a href="category.html">Motorcycle</a></li>
-                <li><a href="category.html">Skin care</a></li>
-                <li><a href="category.html">Smartphones</a></li>
-                <li><a href="category.html">Sports accessories</a></li>
-                <li><a href="category.html">Sunglasses</a></li>
-                <li><a href="category.html">Tablets</a></li>
-                <li><a href="category.html">Tops</a></li>
-                <li><a href="category.html">Vehicle</a></li>
-                <li><a href="category.html">Womens bags</a></li>
-                <li><a href="category.html">Womens dresses</a></li>
-                <li><a href="category.html">Womens jewellery</a></li>
-                <li><a href="category.html">Womens shoes</a></li>
-                <li><a href="category.html">Womens watches</a></li>
-            </ul>
+            <ul></ul>
         </nav>
 
         <div>
@@ -63,12 +39,12 @@
 
             <section class="products-section">
                 <h2 class="section-title">Accesorios de Cocina</h2>
-                <div class="products-container"></div>
+                <div class="products-container seccion-uno"></div>
             </section>
 
             <section class="products-section">
                 <h2 class="section-title">Accesorios Deportivos</h2>
-                <div class="products-container"></div>
+                <div class="products-container seccion-dos"></div>
             </section>
         </div>
     </main>
@@ -76,10 +52,8 @@
     <footer>
         <p>Sitio creado por Melina Piancatelli, Megan Morrison Fell y Felicitas Gligo.</p>
     </footer>
-<<<<<<< HEAD
 
-=======
->>>>>>> cba934482aff9e5d7aafec4d98c44fca49ca8a0d
+    <script src="./js/categorias.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
