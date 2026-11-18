@@ -26,9 +26,6 @@ let terminoBuscado = params.get("Buscar")
 let sectionTitle = document.querySelector(".section-title")
 let productsContainer = document.querySelector(".products-container")
 
-sectionTitle.innerText = `Resultados de búsqueda para: ${terminoBuscado}`
-
-
 let url = `https://dummyjson.com/products/search?q=${terminoBuscado}`
 
 fetch(url)
@@ -42,6 +39,7 @@ fetch(url)
             sectionTitle.innerText = `No hay resultados para el término: ${terminoBuscado}`
             productsContainer.innerHTML = ""
         } else {
+            sectionTitle.innerText = `Resultados de búsqueda para: ${terminoBuscado}`
             let contenido = ""
 
             for (let i = 0; i < productos.length; i++) {
