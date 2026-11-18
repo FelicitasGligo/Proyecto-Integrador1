@@ -1,3 +1,4 @@
+//nav-categorias ul (feli)
 let listaCategorias = document.querySelector('.nav-categorias ul') 
 
 fetch('https://dummyjson.com/products/category-list')
@@ -22,3 +23,36 @@ fetch('https://dummyjson.com/products/category-list')
     .catch(function(error) {
         console.log('Error: ' + error)
     })
+//category  (meli)
+let categoria = new URLSearchParams(location.search).get("categoria")
+
+let tituloCategoria = document.querySelector(".titulo-categoria")
+tituloCategoria.innerText = categoria
+
+fetch(`https://dummyjson.com/products/category/${categoria}`)
+.then(function(response) {
+    return response.json()
+})
+.then(function(data) {
+    console.log(data);
+
+    let seccion = document.querySelector(".lista-categoria")
+    let productos = ""
+
+    for (let i = 0; i < data.products.length; i++) {
+
+        productos = productos + `
+        <article class="product-card">
+            <a href="./product.html?id=${data.products[i].id}"><img class="product-img" src="${data.products[i].thumbnail}" alt="${data.products[i].title}"></a>
+            <h3 class="product-title"><a href="./product.html?id=${data.products[i].id}">${data.products[i].title}</a></h3>
+            <p class="product-desc">${data.products[i].description}</p>
+            <p class="product-price">$${data.products[i].price}</p>
+            <a class="product-btn" href="./product.html?id=${data.products[i].id}">Ver detalle</a>
+        </article>`
+    }
+
+    seccion.innerHTML = productos
+})
+.catch(function(error) {
+    console.log("Error: " + error);
+})
