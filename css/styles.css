@@ -85,6 +85,7 @@ header button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
 }
@@ -99,6 +100,11 @@ header button {
   border-radius: 10px;
   margin: 6px 6px;
   text-align: center;;
+}
+
+.nav-superior li {
+  margin: 0 10px;
+  order: 2;
 }
 
 /* Nav categorías */
@@ -475,6 +481,16 @@ footer {
     color: #6d1934;
 }
 
+.nav-superior .item-bienvenida {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color:#6d1934;
+    padding: 10px 16px;
+    border-radius: 20px;
+    order: 1;
+}
+
 /*Media queries*/
 
 @media (max-width: 440px) {
@@ -683,6 +699,7 @@ footer {
   header .nav-superior li {
     width: 48%;
     margin: 3px 1%;
+    order: 2;
   }
 
   header .nav-superior a {
@@ -690,6 +707,14 @@ footer {
     font-size: 12px;
     padding: 8px 0;
     margin: 0;
+  }
+
+  header .nav-superior .item-bienvenida {
+    width: 96%;
+    font-size: 11px;
+    padding: 8px 4px;
+    text-align: center;
+    order: 1;
   }
 
   /*login*/
@@ -795,5 +820,10 @@ footer {
   .register-container .error-register {
     font-size: 12px;
   }
+
+  .item-bienvenida {
+        font-size: 12px;
+        padding: 8px 8px;
+    }
 
 }

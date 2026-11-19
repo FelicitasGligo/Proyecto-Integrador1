@@ -24,3 +24,23 @@ fetch('https://dummyjson.com/products/category-list')
     .catch(function(error) {
         console.log('Error: ' + error)
     })
+
+// logout
+let btnLogout = document.querySelector(".btn-logout");
+let itemRegistro = document.querySelector(".item-registro");
+let itemLogin = document.querySelector(".item-login");
+let itemBienvenida = document.querySelector(".item-bienvenida");
+let itemLogout = document.querySelector(".item-logout");
+
+btnLogout.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    localStorage.removeItem("usuarioEmail");
+
+    itemBienvenida.innerText = "";
+    itemBienvenida.style.display = "none";
+    itemLogout.style.display = "none";
+
+    itemRegistro.style.display = "block";
+    itemLogin.style.display = "block";
+});
