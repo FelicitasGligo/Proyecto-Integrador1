@@ -1,24 +1,22 @@
-
 // saludo
-let usuarioLogueado = localStorage.getItem("usuarioEmail")
+let usuarioLogueado = localStorage.getItem("usuarioEmail");
 
+if (usuarioLogueado !== null) {
+    let itemRegistro = document.querySelector(".item-registro");
+    let itemLogin = document.querySelector(".item-login");
+    let itemBienvenida = document.querySelector(".item-bienvenida");
+    let itemLogout = document.querySelector(".item-logout");
 
-if (usuarioLogueado) {
-    let navLista = document.querySelector(".nav-superior ul")
-    let itemRegistro = document.querySelector(".item-registro")
-    let itemLogin = document.querySelector(".item-login")
-   
-    itemRegistro.style.display = "none"
-    itemLogin.style.display = "none"
+    itemRegistro.style.display = "none";
+    itemLogin.style.display = "none";
 
-    navLista.innerHTML += "<li>Bienvenido: " + usuarioLogueado + "</li>"
-    navLista.innerHTML += "<li><a href='#' class='btn-logout'>logout</a></li>"
+    itemBienvenida.innerText = `Bienvenido: ${usuarioLogueado}`;
+    itemBienvenida.style.display = "block";
+    itemLogout.style.display = "block";
 
-    let btnLogout = document.querySelector(".btn-logout")
+    let btnLogout = document.querySelector(".btn-logout");
 
-    btnLogout.addEventListener("click", function(e) {
-        e.preventDefault()
-        localStorage.removeItem("usuarioEmail")
-        location.reload()
-    })
+    btnLogout.addEventListener("click", function() {
+        localStorage.removeItem("usuarioEmail");
+    });
 }

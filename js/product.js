@@ -45,65 +45,71 @@ fetch('https://dummyjson.com/products/category-list')
         console.log('Error: ' + error)
     })
 //detalle producto 
-let queryString = location.search
-let params = new URLSearchParams(queryString)
-let idProducto = params.get("id")
+let queryString = location.search;
+let params = new URLSearchParams(queryString);
+let idProducto = params.get("id");
 
 fetch(`https://dummyjson.com/products/${idProducto}`)
     .then(function(response) {
-        return response.json()
+        return response.json();
     })
     .then(function(data) {
-        console.log(data)
+        console.log(data);
 
-        let imagen = document.querySelector(".productoimagen")
-        let nombre = document.querySelector(".productonombre")
-        let marca = document.querySelector(".productomarca")
-        let descripcion = document.querySelector(".productodescripcion")
-        let precio = document.querySelector(".productoprecio")
-        let linkCategoria = document.querySelector(".productocategoria a")
-        let stock = document.querySelector(".productostock")
-        let listaTags = document.querySelector(".productoul")
+        let imagen = document.querySelector(".productoimagen");
+        let nombre = document.querySelector(".productonombre");
+        let marca = document.querySelector(".productomarca");
+        let descripcion = document.querySelector(".productodescripcion");
+        let precio = document.querySelector(".productoprecio");
+        let linkCategoria = document.querySelector(".productocategoria a");
+        let stock = document.querySelector(".productostock");
 
-        imagen.src = data.thumbnail
-        imagen.alt = data.title
-        nombre.innerText = data.title
-        marca.innerText = `Marca: ${data.brand ? data.brand : "Sin marca"}`
-        descripcion.innerText = data.description
-        precio.innerText = `Precio: $${data.price}`
-        
-        linkCategoria.innerText = data.category
-        linkCategoria.href = `./category.html?categoria=${data.category}`
-        
-        stock.innerText = `Stock: ${data.stock} unidades`
+        imagen.src = data.thumbnail;
+        imagen.alt = data.title;
+        nombre.innerText = data.title;
 
-        let contenidoTags = ""
-        let limiteTags = data.tags.length < 3 ? data.tags.length : 3
-
-        for (let i = 0; i < limiteTags; i++) {
-            contenidoTags += `<li class="productoli">${data.tags[i]}</li>`
-        }
-        listaTags.innerHTML = contenidoTags
-
-        let contenedorReviews = document.querySelector(".contenedor-reviews")
-        let contenidoReviews = ""
-
-        for (let i = 0; i < data.reviews.length; i++) {
-            let review = data.reviews[i]
-            let fechaFormateada = new Date(review.date).toLocaleDateString("es-AR")
-
-            contenidoReviews += `
-                <article class="reviewproducto1">
-                    <p class="reviewrating">Rating: ${review.rating} / 5</p>
-                    <p class="reviewcomentario">${review.comment}</p>
-                    <p class="reviewfecha">Fecha: ${fechaFormateada}</p>
-                    <p class="reviewusuario">Usuario: ${review.reviewerName}</p>
-                </article>
-            `
+        if (data.brand) {
+            marca.innerText = `Marca: ${data.brand}`;
+        } else {
+            marca.innerText = "Marca: Sin marca";
         }
 
-        contenedorReviews.innerHTML = contenidoReviews
+        descripcion.innerText = data.description;
+        precio.innerText = `Precio: $${data.price}`;
+
+        linkCategoria.innerText = data.category;
+        linkCategoria.href = `./category.html?categoria=${data.category}`;
+
+        stock.innerText = `Stock: ${data.stock} unidades`;
+
+        let itemsTags = document.querySelectorAll(".productoli");
+
+        for (let i = 0; i < itemsTags.length; i++) {
+            if (i < data.tags.length) {
+                itemsTags[i].innerText = data.tags[i];
+            } else {
+                itemsTags[i].style.display = "none";
+            }
+        }
+
+        let tarjetasReviews = document.querySelectorAll(".reviewproducto1");
+        let ratings = document.querySelectorAll(".reviewrating");
+        let comentarios = document.querySelectorAll(".reviewcomentario");
+        let fechas = document.querySelectorAll(".reviewfecha");
+        let usuarios = document.querySelectorAll(".reviewusuario");
+
+        for (let i = 0; i < tarjetasReviews.length; i++) {
+            if (i < data.reviews.length) {
+                let review = data.reviews[i];
+                ratings[i].innerText = `Rating: ${review.rating} / 5`;
+                comentarios[i].innerText = review.comment;
+                fechas[i].innerText = `Fecha: ${review.date}`;
+                usuarios[i].innerText = `Usuario: ${review.reviewerName}`;
+            } else {
+                tarjetasReviews[i].style.display = "none";
+            }
+        }
     })
     .catch(function(error) {
-        console.log("Error al cargar el producto:", error)
-    })
+        console.log("El error es: " + error);
+    });
